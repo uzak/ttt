@@ -11,7 +11,7 @@ doc:
 	$(MAKE) -C doc html
 
 test: 
-	python -m unittest discover tests "*test.py"
+	nosetests --with-doctest
 
 clean:
 	rm -rf build 
