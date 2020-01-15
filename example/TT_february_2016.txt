@@ -1,0 +1,10 @@
+2016-02-03 12:00 - 18:15 TT:0 Sitting with customer and doing requirements
+2016-02-04 5h30m TT:0 Sitting with customer and doing requirements, contd.
+   2016-02-04 07:15- 8:15 TT:1 Brushing teeth
+
+2016-02-11 9:45-10:15 TT:0 Defining requirements
+ 2016-02-11 2h15m TT:1 Thinking over functional specification
+
+2016-02-23 41h49m OTRP:3 all of OTRP:3 entries summed up in a single day
+2016-02-23 36h45m TT:0 rest of the TT:0 entries
+2016-02-24 35h56m TT:1 rest of the TT:1 entries

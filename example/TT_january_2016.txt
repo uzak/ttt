@@ -1,0 +1,21 @@
+2016-01-03 12:00 - 18:15 TT:0 Sitting with customer and doing requirements
+2016-01-04 5h30m TT:0 Sitting with customer and doing requirements, contd.
+   2016-01-04 07:15- 8:15 TT:1 Brushing teeth
+
+2016-01-11 9:45-10:15 TT:0 Defining requirements
+# 2016-01-11 2h15min TT:1 Thinking over functional specification
+ 2016-01-11 2h15m TT:1 Thinking over functional specification
+
+2016-01-14 10h TT:0 still going through requirements
+2016-01-14 11h TT:0 one more meeting with customer at starbucks 
+2016-01-15 9:15-12:30 TT:0 continuing meeting at starbucks
+2016-01-15 10h30m TT:0 discussing the benefit or requirements A12 and A13
+2016-01-16 9h TT:0 customer signed requirements document V1.0! 
+
+2016-01-16 9h TT:1 starting work on functional specification based on req. doc. V1
+2016-01-16 9-12:15 TT:1 continuing work on func. spec.
+2016-01-17 10h TT:1 continuing work on func. spec.
+2016-01-18 12h TT:1 continuing work on func. spec., created first draft
+2016-01-18 6h30m TT:1 finalized functional specification V1.0!
+
+2016-01-18 50h OTRP:1 we are not checking boundaries of a day!
