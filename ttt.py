@@ -9,14 +9,14 @@
 driver and main class for `Time Tracking Tool` (also known as TTT)
 """
 
-from data import *
-
 import argparse
 import functools
 import logging
 import datetime
 import collections
 import re
+
+from data import *
 
 # line parser
 DATE        = r"(\d{1,}-\d{1,2}-\d{1,2})"
@@ -64,7 +64,7 @@ class TTT:
 
         # filter out all data outside of requested interval (from_dt, to_dt)
         if self.from_date:
-            self.data = filter(lambda x: x.date >= self.from_date, self.data)
+            self.data = filter(lambda x: x.date >= self.from_date.date(), self.data)
         if self.to_date:
             self.data = filter(lambda x: x.date < self.to_date, self.data)
 
@@ -114,15 +114,17 @@ class TTT:
             print()
 
         # print totals
-        start = min(data, key=lambda x: x.date)
-        end = max(data, key=lambda x: x.date)
-        print("%s..........%s" % (
-            start.date.strftime(DATE_FMT), end.date.strftime(DATE_FMT)))
-        print("-" * 30)
-        for cc, entries_by_cc in self.by_cost_center(data).items():
-            print(fmt.format(cc, self.sum(entries_by_cc)))
-        print("=" * 30)
-        print("Total %17s" % self.sum(data))
+        data = list(data) #XXX
+        if data:
+            start = min(data, key=lambda x: x.date)
+            end = max(data, key=lambda x: x.date)
+            print("%s..........%s" % (
+                start.date.strftime(DATE_FMT), end.date.strftime(DATE_FMT)))
+            print("-" * 30)
+            for cc, entries_by_cc in self.by_cost_center(data).items():
+                print(fmt.format(cc, self.sum(entries_by_cc)))
+            print("=" * 30)
+            print("Total %17s" % self.sum(data))
 
 
     def sum(self, data):
@@ -175,9 +177,9 @@ def main():
     group.add_argument("-csv", dest="output_csv", action='store_true')
     args = parser.parse_args()
 
-    logging.debug("args.from_date", args.from_date)
-    logging.debug("args.to_date", args.to_date)
-    logging.debug("args.filename", args.filename)
+    logging.debug("args.from_date: %s" % args.from_date)
+    logging.debug("args.to_date: %s"% args.to_date)
+    logging.debug("args.filename: %s" % args.filename)
 
     ttt = TTT(from_date=args.from_date, to_date=args.to_date)
 
